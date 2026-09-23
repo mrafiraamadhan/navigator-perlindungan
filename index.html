@@ -11,6 +11,7 @@
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='%23184F95'/%3E%3Cpath d='M8 3l4 2v3c0 2.5-1.7 4.3-4 5-2.3-.7-4-2.5-4-5V5z' fill='%23F5C543'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400..800&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem("np_tema");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
 <style>
 :root{
   --ground:#F1F4F6; --surface:#FBFCFD; --surface-2:#E8EDF1; --ink:#0F1B26; --ink-2:#44535F; --muted:#6E7C87;
@@ -78,8 +79,12 @@ p{margin:0}
 .brand .dot{width:10px;height:10px;border-radius:2px;background:linear-gradient(90deg,var(--l1) 0 50%,var(--l3) 50% 100%)}
 .nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
 .nav::-webkit-scrollbar{display:none}
-.nav a{font:600 13px/1 var(--f-ui);color:var(--ink-2);text-decoration:none;padding:9px 10px;border-radius:8px;white-space:nowrap}
+.nav a{font:600 13px/1 var(--f-ui);color:var(--ink-2);text-decoration:none;padding:9px 8px;border-radius:8px;white-space:nowrap}
 .nav a:hover{background:var(--surface-2);color:var(--ink)}
+.tema{flex:none;margin-left:8px}
+@media (max-width:1360px){.nav a{padding:9px 8px;font-size:12.5px}.topbar .wrap{gap:12px}.brand .txt{display:none}}
+.tema button{display:inline-flex;align-items:center;gap:6px;padding:8px 9px}
+.tema button span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 
 /* kepala */
 .masthead{padding-block:clamp(36px,6vw,72px) clamp(28px,4vw,44px)}
@@ -294,7 +299,8 @@ td .sw{width:10px;height:10px;vertical-align:-1px}
   .layers,.two,.sims,.cols3{grid-template-columns:1fr}
   .rec{grid-template-columns:1fr;gap:8px}
   .brand .txt{display:none}
-  .topbar .wrap{gap:10px}
+  .topbar .wrap{gap:8px}
+  .tema{margin-left:0}
 }
 @media (max-width:480px){
   .zones{grid-template-columns:1fr}
@@ -498,8 +504,12 @@ td .sw{width:10px;height:10px;vertical-align:-1px}
     <a class="brand" href="#top"><span class="dot" aria-hidden="true"></span><span class="txt">Navigator Perlindungan</span></a>
     <nav class="nav" aria-label="Bagian">
       <a href="#diagnosis">Diagnosis</a><a href="#kartu">Kartu aksi</a><a href="#siklus">Siklus</a><a href="#simulator">Simulator</a>
-      <a href="#pantau">Pemantauan</a><a href="#cek">Cek perlindungan</a><a href="#dampak">Agar berdampak</a><a href="#metode">Metode</a>
+      <a href="#pantau">Pantau</a><a href="#cek">Cek perlindungan</a><a href="#dampak">Dampak</a><a href="#metode">Metode</a>
     </nav>
+    <div class="seg tema" role="group" aria-label="Tema tampilan">
+      <button type="button" data-tema="light" aria-pressed="false" title="Tema terang"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></g></svg><span>Terang</span></button>
+      <button type="button" data-tema="dark" aria-pressed="false" title="Tema gelap"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z" fill="currentColor"/></svg><span>Gelap</span></button>
+    </div>
   </div>
 </header>
 
@@ -774,6 +784,18 @@ function unduhTeks(nama, teks, tipe = "application/json") {
   if (MODE === "github") unduhBerkas(nama, teks, tipe);
   else navigator.clipboard.writeText(teks).then(() => beritahu("Pratinjau tidak dapat mengunduh berkas; isi " + nama + " disalin ke papan klip."), () => beritahu("Tidak dapat menyalin."));
 }
+
+/* ---------- tema terang / gelap ---------- */
+const TEMAK = "np_tema", root = document.documentElement;
+function temaAktif() { return root.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); }
+function tandaiTema() { const t = temaAktif(); for (const b of document.querySelectorAll(".tema button")) b.setAttribute("aria-pressed", String(b.dataset.tema === t)); }
+document.querySelector(".tema").addEventListener("click", e => {
+  const b = e.target.closest("button[data-tema]"); if (!b) return;
+  root.dataset.theme = b.dataset.tema; try { localStorage.setItem(TEMAK, b.dataset.tema); } catch (err) { /* abaikan */ }
+  tandaiTema(); if (typeof proyeksi === "function") proyeksi();
+});
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", tandaiTema);
+tandaiTema();
 
 /* ---------- keadaan ---------- */
 let view = "zona", kpAktif = "", sel = 75, hoverK = null;
