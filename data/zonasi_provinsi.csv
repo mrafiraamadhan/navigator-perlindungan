@@ -1,0 +1,34 @@
+kode,provinsi,zona,nama_zona,zona_inti,RETT_rata2,TWP90_rata2,bendera_sumbu_Lapis2,kantor_perwakilan_LPS
+62,Kalimantan Tengah,Zona I,"Ketergantungan tinggi, risiko terealisasi tinggi",,15.0921,1.905,,KP LPS II
+18,Lampung,Zona I,"Ketergantungan tinggi, risiko terealisasi tinggi",Ya,13.9294,2.5779,,KP LPS I
+17,Bengkulu,Zona I,"Ketergantungan tinggi, risiko terealisasi tinggi",,13.7862,1.8407,Ya,KP LPS I
+16,Sumatera Selatan,Zona I,"Ketergantungan tinggi, risiko terealisasi tinggi",Ya,13.6658,2.3861,,KP LPS I
+64,Kalimantan Timur (inkl. Kalimantan Utara),Zona I,"Ketergantungan tinggi, risiko terealisasi tinggi",,12.8666,1.9204,,KP LPS II
+73,Sulawesi Selatan,Zona I,"Ketergantungan tinggi, risiko terealisasi tinggi",,12.4004,1.7863,Ya,KP LPS III
+63,Kalimantan Selatan,Zona I,"Ketergantungan tinggi, risiko terealisasi tinggi",Ya,12.2714,2.1784,,KP LPS II
+32,Jawa Barat,Zona I,"Ketergantungan tinggi, risiko terealisasi tinggi",Ya,11.8104,3.0602,Ya,kantor pusat
+36,Banten,Zona I,"Ketergantungan tinggi, risiko terealisasi tinggi",Ya,11.498,2.3961,,kantor pusat
+75,Gorontalo,Zona II,"Ketergantungan tinggi, risiko terealisasi rendah",Ya,27.2194,1.1963,,KP LPS III
+71,Sulawesi Utara,Zona II,"Ketergantungan tinggi, risiko terealisasi rendah",Ya,19.193,1.5924,,KP LPS III
+76,Sulawesi Barat,Zona II,"Ketergantungan tinggi, risiko terealisasi rendah",Ya,18.4265,1.1083,,KP LPS III
+74,Sulawesi Tenggara,Zona II,"Ketergantungan tinggi, risiko terealisasi rendah",Ya,15.7842,1.1652,,KP LPS III
+15,Jambi,Zona II,"Ketergantungan tinggi, risiko terealisasi rendah",,15.6242,1.6365,,KP LPS I
+72,Sulawesi Tengah,Zona II,"Ketergantungan tinggi, risiko terealisasi rendah",Ya,15.0952,1.4945,,KP LPS III
+14,Riau,Zona II,"Ketergantungan tinggi, risiko terealisasi rendah",Ya,14.0564,1.5675,,KP LPS I
+82,Maluku Utara,Zona II,"Ketergantungan tinggi, risiko terealisasi rendah",Ya,13.9157,1.1815,,KP LPS III
+52,Nusa Tenggara Barat,Zona III,"Ketergantungan rendah, risiko terealisasi tinggi",,10.3483,4.0149,,KP LPS II
+61,Kalimantan Barat,Zona III,"Ketergantungan rendah, risiko terealisasi tinggi",,10.3061,1.9597,Ya,KP LPS II
+13,Sumatera Barat,Zona III,"Ketergantungan rendah, risiko terealisasi tinggi",Ya,9.8293,1.8046,,KP LPS I
+33,Jawa Tengah,Zona III,"Ketergantungan rendah, risiko terealisasi tinggi",Ya,8.2598,2.5857,,kantor pusat
+12,Sumatera Utara,Zona III,"Ketergantungan rendah, risiko terealisasi tinggi",,6.5396,1.7911,Ya,KP LPS I
+35,Jawa Timur,Zona III,"Ketergantungan rendah, risiko terealisasi tinggi",Ya,6.3415,2.7356,,KP LPS II
+21,Kepulauan Riau,Zona III,"Ketergantungan rendah, risiko terealisasi tinggi",,5.4386,1.8953,,KP LPS I
+34,DI Yogyakarta,Zona III,"Ketergantungan rendah, risiko terealisasi tinggi",Ya,5.1214,2.5146,,kantor pusat
+31,DKI Jakarta,Zona III,"Ketergantungan rendah, risiko terealisasi tinggi",Ya,2.3653,2.6541,,kantor pusat
+11,Aceh,Zona IV,"Ketergantungan rendah, risiko terealisasi rendah",,10.1112,1.3383,Ya,KP LPS I
+19,Kepulauan Bangka Belitung,Zona IV,"Ketergantungan rendah, risiko terealisasi rendah",,8.8233,1.5649,,KP LPS I
+81,Maluku,Zona IV,"Ketergantungan rendah, risiko terealisasi rendah",,7.2173,1.767,,KP LPS III
+91,Papua Barat,Zona IV,"Ketergantungan rendah, risiko terealisasi rendah",Ya,6.2497,1.3142,Ya,KP LPS III
+51,Bali,Zona IV,"Ketergantungan rendah, risiko terealisasi rendah",Ya,6.1521,1.5544,Ya,KP LPS II
+53,Nusa Tenggara Timur,Zona IV,"Ketergantungan rendah, risiko terealisasi rendah",Ya,5.4427,1.3562,,KP LPS II
+94,Papua,Zona IV,"Ketergantungan rendah, risiko terealisasi rendah",Ya,3.6249,1.3642,Ya,KP LPS III
