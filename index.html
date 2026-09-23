@@ -9,6 +9,8 @@
 <meta property="og:title" content="Navigator Perlindungan">
 <meta property="og:description" content="Alat kerja riset aksi untuk LPS: peta prioritas zonasi RETT, kartu aksi provinsi, siklus riset aksi, simulator S-A/S-B, indikator pemantauan 33 provinsi, dan cek perlindungan untuk masyarakat.">
 <meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F1F4F6">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0B1117">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='%23184F95'/%3E%3Cpath d='M8 3l4 2v3c0 2.5-1.7 4.3-4 5-2.3-.7-4-2.5-4-5V5z' fill='%23F5C543'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400..800&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet">
 <script>try{var t=localStorage.getItem("np_tema");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
@@ -342,7 +344,13 @@ td .sw{width:10px;height:10px;vertical-align:-1px}
 
 /* kartu aksi */
 .kartu-kepala{display:flex;flex-wrap:wrap;gap:14px;align-items:end;justify-content:space-between;margin-bottom:14px}
-.kartu-kepala .pick{max-width:360px;flex:1 1 260px}
+.kartu-kepala .pick{max-width:360px;flex:1 1 220px}
+.pick-row{display:flex;align-items:end;gap:8px;flex:1 1 300px}
+.pick-row .seg{margin-bottom:1px}
+.pick-row .seg button{font-size:18px;padding:6px 12px;line-height:1}
+.hm-svg{cursor:pointer}
+.plist{padding-bottom:26px}
+.kuis .opsi button b{font-weight:700;color:var(--muted);margin-right:2px}
 .tools{display:flex;flex-wrap:wrap;gap:8px}
 .kartu{background:var(--surface);border:1px solid var(--hair);border-radius:16px;padding:22px;display:grid;gap:18px}
 .kartu .judul{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:baseline;justify-content:space-between}
@@ -642,7 +650,7 @@ footer{padding-block:34px 44px}
         <p class="eyebrow">Riset aksi · LPS Call for Research 2026 · Topik 8</p>
         <h1>Navigator <span class="tt">Perlindungan</span></h1>
         <p class="dek">Alat kerja untuk mengubah zonasi RETT menjadi program yang tepat sasaran: diagnosis wilayah, kartu aksi provinsi, simulator, pemantauan, dan refleksi, dalam satu siklus.</p>
-        <p class="thesis">Inklusi keuangan nasional sudah <b>93,61%</b>, tetapi hanya <b>62,51%</b> pemilik rekening yang tahu simpanannya dijamin dan <b>46,31%</b> yang mengenal LPS (SNLIK 2026). Di 9 + 8 provinsi prioritas, <b>13,0 juta</b> rekening peminjam LPBBTI aktif (51,9% nasional) berada di kanal tanpa jaring pengaman. Situs ini membantu menjawab tiga hal: di mana mulai, apa yang dilakukan, dan bagaimana tahu bahwa itu berhasil.</p>
+        <p class="thesis">Inklusi keuangan nasional sudah <b>93,61%</b>, tetapi hanya <b>62,51%</b> pemilik rekening yang tahu simpanannya dijamin dan <b>46,31%</b> yang mengenal LPS (SNLIK 2026). Di 9 + 8 provinsi prioritas, <b>13,04 juta</b> rekening peminjam LPBBTI aktif (51,9% nasional) berada di kanal tanpa jaring pengaman. Situs ini membantu menjawab tiga hal: di mana mulai, apa yang dilakukan, dan bagaimana tahu bahwa itu berhasil.</p>
       </div>
       <figure class="hero-map">
         <div class="hm-svg" id="hero-map" aria-hidden="true"></div>
@@ -651,7 +659,7 @@ footer{padding-block:34px 44px}
     </div>
     <div class="stats" role="list">
       <div class="stat" role="listitem"><span class="k">Provinsi prioritas</span><span class="v num">9 + 8</span><span class="c">Zona I (tunggakan tinggi) dan Zona II (inti Sabuk Tak Terlindungi)</span></div>
-      <div class="stat" role="listitem"><span class="k">Rekening peminjam aktif di sana</span><span class="v num">13,0 jt</span><span class="c">51,9% dari nasional, sasaran R1 dan R2</span></div>
+      <div class="stat" role="listitem"><span class="k">Rekening peminjam aktif di sana</span><span class="v num">13,04 jt</span><span class="c">51,9% dari nasional, sasaran R1 dan R2</span></div>
       <div class="stat" role="listitem"><span class="k">Tahu simpanannya dijamin</span><span class="v hot num">62,51%</span><span class="c">pemilik rekening, SNLIK 2026; target indikator R1 dan R2</span></div>
       <div class="stat" role="listitem"><span class="k">Risiko masuk kembali ke jaring</span><span class="v num">Rp1.123 M</span><span class="c">kerugian harapan S-B, bank pemberi dana LPBBTI</span></div>
     </div>
@@ -711,7 +719,7 @@ footer{padding-block:34px 44px}
       <div class="prose"><p>Satu halaman per provinsi: mengapa provinsi itu prioritas, paket program yang berlaku (R1 sampai R5 dari naskah), sasaran yang terukur, mitra dan kanal, serta rencana 90 hari yang dapat dicentang. Kartu ini dimaksudkan untuk dibawa ke rapat Kantor Perwakilan, TPAKD provinsi, dan forum koordinasi dengan OJK.</p></div>
     </div>
     <div class="kartu-kepala">
-      <label class="pick"><span>Provinsi</span><select id="pilih-kartu"></select></label>
+      <div class="pick-row"><label class="pick"><span>Provinsi</span><select id="pilih-kartu"></select></label><div class="seg"><button type="button" id="btn-prev" aria-label="Provinsi sebelumnya">‹</button><button type="button" id="btn-next" aria-label="Provinsi berikutnya">›</button></div></div>
       <div class="tools">
         <button type="button" class="btn" id="btn-cetak">Cetak kartu</button>
         <button type="button" class="btn" id="btn-salin">Salin ringkasan</button>
@@ -803,7 +811,7 @@ footer{padding-block:34px 44px}
       <div class="prose"><p>Papan skor per wilayah kerja dan tabel 33 provinsi pada posisi 2025Q2. Indikator keberhasilan di bawahnya adalah usulan yang diturunkan dari sasaran program naskah; nilai targetnya sebaiknya ditetapkan bersama pelaksana pada awal ronde 1, lalu diukur ulang setiap pemutakhiran panel.</p></div>
     </div>
     <div class="skor" id="skor"></div>
-    <div class="cari"><input type="search" id="cari" placeholder="Cari provinsi…" aria-label="Cari provinsi"><span class="small">Klik judul kolom untuk mengurutkan.</span></div>
+    <div class="cari"><input type="search" id="cari" placeholder="Cari provinsi, wilayah kerja, atau zona…" aria-label="Cari provinsi, wilayah kerja, atau zona"><span class="small">Klik judul kolom untuk mengurutkan.</span></div>
     <div class="scroll"><table id="tbl-pantau"></table></div>
     <h3 style="margin-top:22px">Indikator keberhasilan yang diusulkan</h3>
     <div class="indik" id="indik"></div>
@@ -943,6 +951,7 @@ let view = "zona", kpAktif = "", sel = 75, hoverK = null;
   const hb = $("#hero-map"), svg = S("svg", { viewBox: `0 0 ${D.geo.W} ${D.geo.H}`, "aria-hidden": "true" }, hb);
   for (const p of D.prov) S("path", { d: D.geo.paths[p.k], class: "z" + ZN[p.z] }, svg);
   S("path", { d: D.geo.sabuk, class: "sabuk" }, svg);
+  hb.addEventListener("click", () => document.getElementById("diagnosis").scrollIntoView({ behavior: "smooth" }));
 }
 /* ---------- tombol ke atas dan penanda bagian aktif ---------- */
 {
@@ -1015,7 +1024,7 @@ function provKP(kp) { return D.prov.filter(p => !kp || p.kp === kp); }
 function ringkasKP() {
   const ps = provKP(kpAktif), z1 = ps.filter(p => p.z === "Zona I"), z2 = ps.filter(p => p.z === "Zona II"), l2 = ps.filter(p => p.l2);
   const rek = z1.concat(z2).reduce((a, p) => a + p.rek, 0), mean = ps.reduce((a, p) => a + p.r[NP - 1], 0) / ps.length;
-  $("#kp-sum").innerHTML = [[`Provinsi di ${kpAktif ? KPN(kpAktif) : "33 provinsi"}`, ps.length, `RETT rata-rata ${AKHIR}: ${fmt(mean)}%`],
+  $("#kp-sum").innerHTML = [[kpAktif ? `Provinsi · ${KPS(kpAktif)}` : "Provinsi · seluruh Indonesia", ps.length, `RETT rata-rata ${AKHIR}: ${fmt(mean)}%`],
     ["Zona I · Zona II", `${z1.length} · ${z2.length}`, `${z1.filter(p => p.zi).length + z2.filter(p => p.zi).length} zona inti`],
     ["Bendera Lapis 2", l2.length, l2.length === 0 ? "tidak ada" : l2.length <= 3 ? l2.map(brief).join(", ") : "ditandai L2 di daftar"],
     ["Rekening peminjam aktif Zona I + II", z1.length + z2.length ? juta(rek) : "—", `sasaran R1 dan R2, ${AKHIR}`]]
@@ -1038,7 +1047,7 @@ function kartuZona() {
     const g = ps.filter(p => p.z === z), rek = g.reduce((a, p) => a + p.rek, 0), mean = g.length ? g.reduce((a, p) => a + p.r[NP - 1], 0) / g.length : null;
     return `<button type="button" class="zc" data-z="${z}"><div class="zh"><span class="zn bz${ZN[z]}">${ROM[z]}</span><div><div class="zt">${z}</div><div class="zd">${D.zn[z].replace("Ketergantungan", "ketergantungan").replace("risiko terealisasi", "tunggakan")}</div></div></div>
       <div class="zv num">${g.length} <span class="zk">provinsi${kpAktif ? " di " + KPS(kpAktif) : ""}</span></div>
-      <div class="zk">${g.length ? `RETT rata-rata ${fmt(mean, 1)}% · ${g.length > 1 ? juta(rek) + " rekening peminjam" : juta(rek) + " rekening peminjam"}` : "tidak ada di wilayah ini"}</div>
+      <div class="zk">${g.length ? `RETT rata-rata ${fmt(mean, 1)}% · ${juta(rek)} rekening peminjam` : "tidak ada di wilayah ini"}</div>
       <div class="zp">${paket[z]}</div></button>`;
   }).join("");
 }
@@ -1097,10 +1106,10 @@ const bar = (v, amb, skala) => v == null ? "" : `<span class="bar${v >= amb ? " 
 const selK = $("#pilih-kartu");
 selK.innerHTML = [...D.prov].sort(urutNama).map(p => `<option value="${p.k}">${esc(brief(p))}</option>`).join("");
 selK.addEventListener("change", () => pilih(+selK.value));
-function pilih(k) { sel = k; selK.value = String(k); gP.appendChild(pathEl.get(k)); gambarPeta(); kartu(); tandaiDaftar(); }
+function pilih(k) { sel = k; selK.value = String(k); gP.appendChild(pathEl.get(k)); gambarPeta(); kartu(); tandaiDaftar(); if (typeof ikutKartu === "function") ikutKartu(); }
 function kartu() {
   const p = byK.get(sel), paket = paketUntuk(p), lisa = p.lisa[AKHIR];
-  const prio = p.z === "Zona II" ? "Prioritas R1: edukasi penjaminan terarah" : p.z === "Zona I" ? "Prioritas R2 dan R4: edukasi, perlindungan konsumen, pemantauan eksposur bank" : "Pemantauan rutin";
+  const prio = (p.z === "Zona II" ? "Prioritas R1: edukasi penjaminan terarah" : p.z === "Zona I" ? "Prioritas R2 dan R4: edukasi, perlindungan konsumen, pemantauan eksposur bank" : "Pemantauan rutin") + (p.l2 ? " · R3: surveilans BPR" : "");
   const chips = [`<span class="chip"><span class="sw bz${ZN[p.z]}"></span>${p.z}${p.zi ? " · inti" : ""}</span>`, `<span class="chip">${KPN(p.kp)}</span>`];
   if (D.sabuk.includes(p.k)) chips.push(`<span class="chip"><svg width="16" height="8" aria-hidden="true"><line x1="1" y1="4" x2="15" y2="4" class="belt-line"/></svg>Sabuk Tak Terlindungi</span>`);
   if (lisa && lisa !== "Tidak nyata") chips.push(`<span class="chip"><span class="sw b${LC[lisa]}"></span>LISA ${AKHIR}: ${lisa}</span>`);
@@ -1129,11 +1138,11 @@ function kartu() {
       <section class="lebar"><h4>Paket program yang berlaku</h4><div class="paket">${paket.map(id => { const r = REK[id]; return `<div class="rk"><span class="rid">${id === "P0" ? "P" : id}</span><div><h5>${esc(r.j)}</h5><p>${esc(r.apa)}</p><dl><dt>Pelaksana</dt><dd>${esc(r.siapa)}</dd><dt>Mekanisme</dt><dd>${esc(r.mek)}</dd><dt>Uji mandat</dt><dd>${esc(r.mandat)}</dd><dt>Indikator</dt><dd>${esc(r.ind)}</dd></dl></div></div>`; }).join("")}</div></section>
       <section><h4>Mitra dan kanal</h4><div class="mitra">${["Pemerintah provinsi", "TPAKD provinsi", `BPR/BPRS (${p.n_bpr} kantor)`, `Bank umum (${p.kantor_bu} kantor)`, "Pasar dan koperasi", "Komunitas dan tokoh lokal", "Kantor OJK provinsi", "Perguruan tinggi (duta penjaminan)"].concat(p.z === "Zona I" ? ["Forum keterangan produk dengan OJK"] : []).map(m => `<span>${esc(m)}</span>`).join("")}</div>
         <p class="small">Kanal mengikuti mekanisme R1 dan R2 dalam naskah; pilih tiga lokasi uji coba untuk ronde 1.</p></section>
-      <section><h4>Rencana 90 hari</h4><div class="progress"><i id="cek-bar"></i></div><ul class="cek-list" id="cek-list">${rencana.map((t, i) => `<li class="${cek.includes(i) ? "done" : ""}"><input type="checkbox" data-i="${i}" ${cek.includes(i) ? "checked" : ""} aria-label="Langkah ${i + 1}"><span>${esc(t)}</span></li>`).join("")}</ul></section>
+      <section><h4>Rencana 90 hari <span class="small" id="cek-teks" style="text-transform:none;letter-spacing:0;font-weight:500"></span></h4><div class="progress"><i id="cek-bar"></i></div><ul class="cek-list" id="cek-list">${rencana.map((t, i) => `<li class="${cek.includes(i) ? "done" : ""}"><input type="checkbox" data-i="${i}" ${cek.includes(i) ? "checked" : ""} aria-label="Langkah ${i + 1}"><span>${esc(t)}</span></li>`).join("")}</ul></section>
     </div>`;
   progres();
 }
-function progres() { const li = [...$("#cek-list").querySelectorAll("li")], n = li.filter(l => l.classList.contains("done")).length; $("#cek-bar").style.width = (li.length ? n / li.length * 100 : 0) + "%"; }
+function progres() { const li = [...$("#cek-list").querySelectorAll("li")], n = li.filter(l => l.classList.contains("done")).length; $("#cek-bar").style.width = (li.length ? n / li.length * 100 : 0) + "%"; $("#cek-teks").textContent = `· ${n} dari ${li.length} langkah`; }
 $("#kartu-isi").addEventListener("change", e => {
   const c = e.target.closest("input[type=checkbox]"); if (!c) return;
   c.closest("li").classList.toggle("done", c.checked);
@@ -1144,6 +1153,8 @@ function ringkasanKartu() {
   return `Kartu aksi ${full(p)} (${p.z}${p.zi ? ", inti" : ""}; ${KPN(p.kp)}), posisi ${AKHIR}.\nRETT ${fmt(p.r[NP - 1])}% (peringkat ${p.rank}/33); rata-rata 18 triwulan ${fmt(p.rr)}% vs ambang ${fmt(D.amb.rett)}%; TWP90 rata-rata ${p.tw == null ? "—" : fmt(p.tw, 3) + "%"} vs ambang ${fmt(D.amb.twp, 3)}%; kegagalan BPR per 100 kantor ${fmt(p.bpr100)}${p.l2 ? " (bendera Lapis 2)" : ""}.\nPaket: ${paket}.\nSasaran: ${juta(p.rek)} rekening peminjam aktif (${fmt(p.rek1000, 0)} per 1.000 dewasa); TWP90 ${p.twp25 == null ? "—" : fmt(p.twp25, 2) + "%"}; outstanding lewat 90 hari ${p.lewat90 == null ? "—" : "Rp" + fmt(p.lewat90, 0) + " miliar"}.\nRencana 90 hari:\n${rencana90(p).map((t, i) => `${i + 1}. ${t}`).join("\n")}`;
 }
 $("#btn-cetak").addEventListener("click", () => window.print());
+$("#btn-prev").addEventListener("click", () => geser(-1)); $("#btn-next").addEventListener("click", () => geser(1));
+function geser(d) { const ps = [...D.prov].sort(urutNama), i = ps.findIndex(p => p.k === sel); pilih(ps[(i + d + ps.length) % ps.length].k); }
 $("#btn-salin").addEventListener("click", () => navigator.clipboard.writeText(ringkasanKartu()).then(() => beritahu("Ringkasan kartu disalin."), () => beritahu("Tidak dapat menyalin.")));
 $("#btn-json").addEventListener("click", () => { const p = byK.get(sel); unduhTeks(`kartu-aksi-${p.s.toLowerCase().replace(/[^a-z0-9]+/g, "-")}.json`, JSON.stringify({ posisi: AKHIR, provinsi: full(p), zona: p.z, inti: p.zi, kantor_perwakilan: KPN(p.kp), RETT: p.r[NP - 1], RETT_rata2: p.rr, TWP90_rata2: p.tw, kegagalan_BPR_per100kantor: p.bpr100, bendera_lapis2: p.l2, paket: paketUntuk(p), sasaran: { rekening_peminjam_aktif: p.rek, per_1000_dewasa: p.rek1000, TWP90: p.twp25, outstanding_lewat90hari_Rpmiliar: p.lewat90 }, rencana_90_hari: rencana90(p), selesai: muat("np_cek_" + p.k, []) }, null, 2)); });
 
@@ -1155,6 +1166,8 @@ selKP.innerHTML = D.kp_daftar.map(k => `<option value="${k}">${KPN(k)}</option>`
 fil.innerHTML += D.kp_daftar.map(k => `<option value="${k}">${KPN(k)}</option>`).join("");
 function isiProv() { selProv.innerHTML = D.prov.filter(p => p.kp === selKP.value).sort(urutNama).map(p => `<option value="${p.k}">${esc(brief(p))}</option>`).join(""); }
 selKP.addEventListener("change", isiProv); isiProv();
+function ikutKartu() { const p = byK.get(sel); if (!p || selKP.value === p.kp) { selProv.value = String(sel); return; } selKP.value = p.kp; isiProv(); selProv.value = String(sel); }
+ikutKartu();
 $("#log-form").addEventListener("submit", e => {
   e.preventDefault(); const f = new FormData(e.target);
   log.unshift({ id: Date.now(), kp: f.get("kp"), prov: +f.get("prov"), tahap: f.get("tahap"), tanggal: f.get("tanggal"), isi: f.get("isi").trim(), angka: (f.get("angka") || "").trim() });
@@ -1306,13 +1319,25 @@ const KUIS = [
   { q: "Menaruh dana sebagai pemberi pinjaman di platform LPBBTI…", o: ["sama dengan deposito, dijamin LPS", "tidak dijamin; kamu menanggung risiko gagal bayar peminjam", "dijamin oleh platform"], b: 1, k: "Dana pemberi pinjaman bukan simpanan bank. Risiko gagal bayar peminjam ditanggung pemberi dana." },
 ];
 const jawab = new Array(KUIS.length).fill(null);
-function kuis() {
-  const n = jawab.filter(x => x !== null).length, benar = jawab.filter((x, i) => x === KUIS[i].b).length;
-  $("#kuis").innerHTML = KUIS.map((q, i) => `<div class="q"><p>${i + 1}. ${esc(q.q)}</p><div class="opsi">${q.o.map((o, j) => `<button type="button" data-q="${i}" data-j="${j}" class="${jawab[i] === null ? "" : j === q.b ? "benar" : jawab[i] === j ? "salah" : ""}" ${jawab[i] !== null ? "disabled" : ""}>${esc(o)}</button>`).join("")}</div>${jawab[i] !== null ? `<div class="ket">${jawab[i] === q.b ? "Benar." : "Belum tepat."} ${esc(q.k)}</div>` : ""}</div>`).join("")
-    + (n === KUIS.length ? `<div class="kuis-skor">Skor ${benar} dari ${KUIS.length}. Secara nasional hanya ${fmt(D.snlik.tahu_dijamin)}% pemilik rekening yang tahu simpanannya dijamin dan ${fmt(D.snlik.kenal_lps)}% yang mengenal LPS (SNLIK 2026). <button type="button" class="btn" id="kuis-ulang" style="margin-left:8px">Ulangi</button></div>` : "");
+let urutan = [];  // urutan pilihan tiap soal, diacak agar posisi jawaban benar berbeda-beda
+function acak(a) { for (let i = a.length - 1; i > 0; i--) { const r = Math.floor(Math.random() * (i + 1)); [a[i], a[r]] = [a[r], a[i]]; } return a; }
+function acakKuis() {
+  // posisi jawaban benar dibagi rata antara A, B, dan C (tidak ada huruf yang muncul lebih dari dua kali), lalu diacak
+  const posisi = acak(KUIS.map((_, i) => i % 3));
+  urutan = KUIS.map((q, i) => { const lain = acak(q.o.map((_, j) => j).filter(j => j !== q.b)); const a = []; for (let k = 0; k < q.o.length; k++) a.push(k === posisi[i] ? q.b : lain.shift()); return a; });
 }
-$("#kuis").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; if (b.id === "kuis-ulang") { jawab.fill(null); kuis(); return; } if (b.dataset.q != null && jawab[+b.dataset.q] === null) { jawab[+b.dataset.q] = +b.dataset.j; kuis(); } });
-kuis();
+function kuis() {
+  const n = jawab.filter(x => x !== null).length, benar = jawab.filter((x, i) => x === KUIS[i].b).length, huruf = "ABC";
+  $("#kuis").innerHTML = KUIS.map((q, i) => `<div class="q"><p>${i + 1}. ${esc(q.q)}</p><div class="opsi">${urutan[i].map((j, k) => `<button type="button" data-q="${i}" data-j="${j}" class="${jawab[i] === null ? "" : j === q.b ? "benar" : jawab[i] === j ? "salah" : ""}" ${jawab[i] !== null ? "disabled" : ""}><b>${huruf[k]}.</b> ${esc(q.o[j])}</button>`).join("")}</div>${jawab[i] !== null ? `<div class="ket">${jawab[i] === q.b ? "Benar." : "Belum tepat."} ${esc(q.k)}</div>` : ""}</div>`).join("")
+    + (n === KUIS.length ? `<div class="kuis-skor">Skor ${benar} dari ${KUIS.length}. Secara nasional hanya ${fmt(D.snlik.tahu_dijamin)}% pemilik rekening yang tahu simpanannya dijamin dan ${fmt(D.snlik.kenal_lps)}% yang mengenal LPS (SNLIK 2026). <span class="tools" style="display:inline-flex;margin-left:8px"><button type="button" class="btn" id="kuis-ulang">Ulangi</button><button type="button" class="btn" id="kuis-bagi">Salin hasil</button></span></div>` : "");
+}
+$("#kuis").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  if (b.id === "kuis-ulang") { jawab.fill(null); acakKuis(); kuis(); return; }
+  if (b.id === "kuis-bagi") { const benar = jawab.filter((x, i) => x === KUIS[i].b).length; const t = `Skor kuis perlindungan simpanan: ${benar} dari ${KUIS.length}. Cek punyamu di ${location.href.split("#")[0]}#cek`; (navigator.share ? navigator.share({ text: t }).catch(() => {}) : navigator.clipboard.writeText(t).then(() => beritahu("Hasil disalin."), () => beritahu("Tidak dapat menyalin."))); return; }
+  if (b.dataset.q != null && jawab[+b.dataset.q] === null) { jawab[+b.dataset.q] = +b.dataset.j; kuis(); }
+});
+acakKuis(); kuis();
 
 /* ---------- unduhan ---------- */
 /*GH2*/function tautanUnduh() { return `<h3 class="dl-h">Unduh data</h3><div class="dl">${D.files.map(f => `<a href="data/${f.f}" download><span>${f.t}</span><span class="num small">CSV · ${f.kb} KB</span></a>`).join("")}</div>`; }/*GH2-END*/
